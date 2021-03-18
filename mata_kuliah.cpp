@@ -11,9 +11,10 @@
 #include "mata_kuliah.hpp"
 #include "tools.hpp"
 using namespace std;
-ofstream mkfile;
+ofstream outfile;
+
 void open_matakuliah(){
-    mkfile.open("matakuliah.txt", ios_base::app);
+    outfile.open("matakuliah.txt", ios_base::app);
 }
 std::vector<mata_kuliah> select_mata_kuliah(){
     string line;
@@ -39,8 +40,8 @@ std::vector<mata_kuliah> select_mata_kuliah(){
 }
 void insert_mata_kuliah(int id, string kode, string nama) {
     open_matakuliah();
-    mkfile << id << ","<< kode << "," << nama << endl;
-    mkfile.close();
+    outfile << id << ","<< kode << "," << nama << endl;
+    outfile.close();
 }
 void update_mata_kuliah(int id, string kode, string nama) {
     ifstream myfile ("matakuliah.txt");
@@ -52,6 +53,7 @@ void delete_mata_kuliah(int id) {
 //    mata_kuliah = select_all();
 }
 mata_kuliah search_mata_kuliah(string kode) {
+    string line;
     mata_kuliah mk;
     mk.id = 0;
     mk.kode = "";
@@ -84,19 +86,12 @@ int buat_mata_kuliah() {
     return 2;
 }
 int ubah_mata_kuliah(){
-    string kode,nama;
+    string kode;
     cout << "Ubah Mata Kuliah :" << endl;
     cout << std::string(30,'=') << endl;
     cout << "Kode : ";
     cin >> kode;
     mata_kuliah mk = search_mata_kuliah(kode);
-    if(mk.id==0){
-        cout << "Tidak ada mata kuliah dengan kode ini!" << endl;
-        return 2;
-    }
-    cout << "Nama Mata kuliah : ";
-    cin >> nama;
-    
     return 2;
 }
 int hapus_mata_kuliah(){

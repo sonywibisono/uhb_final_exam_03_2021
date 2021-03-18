@@ -4,6 +4,7 @@
 //
 //  Created by Sony Wibisono on 14/03/21.
 //
+
 #include <iostream>
 #include <fstream>
 #include "nilai.hpp"
@@ -32,23 +33,23 @@ vector<nilai> select_nilai(){
     
     return result;
 }
-void select_all_siswa(){
+void select_all_nilai(){
     cout << "Daftar Nilai" << endl;
     cout << std::string(30,'=') << endl;
 }
-void buat_siswa(){
+void buat_nilai(){
     cout << "Entri Nilai Baru :" << endl;
     cout << std::string(30,'=') << endl;
 }
-void ubah_siswa(){
+void ubah_nilai(){
     cout << "Ubah Nilai Siswa :" << endl;
     cout << std::string(30,'=') << endl;
 }
-void hapus_siswa(){
+void hapus_nilai(){
     cout << "Hapus Nilai :" << endl;
     cout << std::string(30,'=') << endl;
 }
-void cari_siswa(){
+void cari_nilai(){
     cout << "Cari Nilai :" << endl;
     cout << std::string(30,'=') << endl;
 }

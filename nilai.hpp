@@ -19,4 +19,5 @@ struct nilai {
     string huruf;
 };
 
+
 #endif /* nilai_hpp */
