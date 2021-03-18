@@ -14,3 +14,4 @@ Silakan dipelajari
 4. `cmake ..`
 5. `cmake --build .`
 
+Tolong koding ini dilengkapi sesuai tugas akhir di Mata Kuliah Pemrograman I
